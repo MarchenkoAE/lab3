@@ -1,3 +1,4 @@
+//lab3 part 1: by Marchenko Alex 007g1
 //task1
 let admin="", name="John";
 admin= name;
