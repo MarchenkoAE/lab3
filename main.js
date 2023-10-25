@@ -160,28 +160,37 @@ for (let i = 2; i <= n; i++)
      //
      //1
      let input="фывфавыапрс";
-       function findFirstDiff(str, n)
-           {
-               let index = 0;
-               for (let i = 0; i < n; i++)
-               {
-                   let j;
-                   for (j = 0; j < i; j++)
-                   {
-                       if (str[i] == str[j])
-                       {
-                           break;
-                       }
-                   }
+function check (s) {
+  for (let l of s)
+    if (s.indexOf(l) === s.lastIndexOf(l))
+      return l
+  return null
+}
+console.log(check(input))
+         //2
+input=6;
+function generateRandomString(length) {
+    let result = '';
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let charactersLength = characters.length;
+    for (let i = 0; i<length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+console.log(generateRandomString(input));
+         //3
 
-                   if (j == i)
-                   {
-                       str[index++] = str[i];
-                   }
-               }
+let input="feuifhure";
+ let result="";
+function UniqueChar(str, result) {
+ for (var x=0;x < str.length;x++) {
 
-               return str.join("").slice(str, index);
-           }
-              let str = input.split("");
-              let n = str.length;
-              console.log(findFirstDiff(str, n));
+ if(result.indexOf(str.charAt(x))==-1) {
+  result += str[x];  
+  
+   }
+  }
+  return result;  
+}  
+console.log(UniqueChar(input, result));
